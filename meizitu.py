@@ -65,7 +65,7 @@ class Meizitu:
             # 下载图片
             thread = threading.Thread(target=self.get_picture_url,args=(img_info['name'],img_info['url']))
             thread.start()
-            sleep(2)
+            sleep(15)
             page_img_urls.append(img_info)
         return page_img_urls
 
