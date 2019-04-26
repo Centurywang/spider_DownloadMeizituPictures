@@ -19,3 +19,5 @@ spider.py 从网站获取所有套图name和url并存入redis数据库集合内(
 slave_spider.py 从redis数据库集合内获取套图name以及url，爬取该套图内所有图片并下载(用于在从节点上运行)
   注：实现原理：redis的集合类型，保存name和url时不会重复，取出数据时使用spop命令(随即删除一个数据并返回)
 
+4.scrapy 分布式爬取 
+说明： http://centuryw.cn/index.php/2019/04/26/scrapy%E7%88%AC%E5%8F%96%E5%A6%B9%E5%AD%90%E5%9B%BE%E5%88%86%E5%B8%83%E5%BC%8F/
