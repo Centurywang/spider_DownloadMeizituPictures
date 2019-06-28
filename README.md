@@ -1,6 +1,7 @@
 # spider_DownloadMeizituPictures
 爬虫爬取妹子图并将图片下载
-
+推荐使用**optional_page_crawler**文件夹的爬虫(可选类型和页面)
+下面代码已经过时  
 1.简单爬取(simple_crawler文件夹)
 
 meiziSpider.py文件  获取套图名称及url地址并保存到json文件
