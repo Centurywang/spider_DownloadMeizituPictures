@@ -24,7 +24,3 @@ slave_spider.py 从redis数据库集合内获取套图name以及url，爬取该�
 
 4.scrapy 分布式爬取 
 说明： http://centuryw.cn/index.php/2019/04/26/scrapy%E7%88%AC%E5%8F%96%E5%A6%B9%E5%AD%90%E5%9B%BE%E5%88%86%E5%B8%83%E5%BC%8F/
-<<<<<<< HEAD
-
-=======
->>>>>>> f269656fe484db95cf912b34f6745eb2fb82fb7b

@@ -110,7 +110,11 @@ class MeiziSpider:
         # 获取总页数
         response = self.get_response(url,headers=self.headers)
         response = self.etree_response(response)
-        page_num = response.xpath('//a[@class="page-numbers"]/text()')[-1]
+        if classify_name in ['自拍','街拍']:
+            page_num = response.xpath('//span[@aria-current="page"]/text()')[0]
+        else:
+            page_num = response.xpath('//a[@class="page-numbers"]/text()')[-1]
+
         # 选择爬取的页面范围
         while True:
             numbers = input('该分类共有{}页，请选择要爬取的范围:(示例:1-11 注：0退出):\n请输入:'.format(page_num))
@@ -120,7 +124,11 @@ class MeiziSpider:
             try:
                 start_number = int(numbers[0])
                 end_number = int(numbers[1])
-                break
+                if 1<=start_number<=int(page_num) and 1<=end_number<=int(page_num):
+                    break
+                else:
+                    print('输入范围有误，请重新输入！')
+                    continue
             except Exception as e:
                 print(e)
         # 根据分类创建文件夹
